@@ -1,6 +1,6 @@
 package com.company;
 
-public class Locations {
+public class Location {
 
 
 
