@@ -2,6 +2,12 @@ package com.company;
 
 public class Location {
 
+    private static boolean northDirection = false;
+    private static boolean southDirection = false;
+    private static boolean westDirection = false;
+    private static boolean eastDirection = false;
+
+
 
     public static void gameWorld() {
         String[][] map = new String[5][5];
@@ -31,9 +37,25 @@ public class Location {
         map[4][3] = "You have arrived at ";
         map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
         System.out.println(map[0][1]);
+      /*  player.setCurrRoom(map[2][12]);*/
 
+    }
+    public boolean roomExists(int x, int y) {
+        return (rowExists(x)) && (colExists(y));
+    }
 
+    public boolean rowExists(int x) {
+        return (x >= 0) && (x <= 4);
+    }
+
+    public boolean colExists(int y) {
+        return (y >= 0) && (y <= 4);
+    }
 
 
     }
-}
+
+
+
+
+
