@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class IO {
 
+    //Method for delaying text
+
     private static void textDelay(long a) {
         try {
             Thread.sleep(a);
@@ -14,9 +16,11 @@ public class IO {
     }
 
 
+    //Intro message
+
     public static void Welcome() {
         //system objects
-        Scanner nameInput = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
 
         //Welcome Message
 
@@ -34,7 +38,7 @@ public class IO {
 
         System.out.print("Enter your name: ");
 
-        String pName = nameInput.nextLine();
+        String pName = userInput.nextLine();
 
         System.out.println(pName +" honey what do you think it is, your wife whispers.");
 
@@ -64,6 +68,35 @@ public class IO {
 
 
         //System.out.println("Your adventure awaits " + pName + "!");
+    }
+
+    public static void movePlayer(Player player) {
+
+        if (Dungeon.isNorthDirection() == true) {
+            System.out.println("North (n)\n");
+        }
+        if (Dungeon.isSouthDirection() == true) {
+            System.out.println("South (s)\n");
+        }
+        if (Dungeon.isEastDirection() == true) {
+            System.out.println("East (e)\n");
+        }
+        if (Dungeon.isWestDirection() == true) {
+            System.out.println("West (w)\n");
+        }
+
+        System.out.print("Where would you like to travel?: ");
+        String selection = ProjectMoria.USERINPUT.nextLine();
+        if (selection.equals("n") && Dungeon.isNorthDirection()) {
+            player.setCurrY(player.getCurrY() + 1);
+        } else if (selection.equals("s") && Dungeon.isSouthDirection()) {
+            player.setCurrY(player.getCurrY() - 1);
+        } else if (selection.equals("e") && Dungeon.isEastDirection()) {
+            player.setCurrX(player.getCurrX() + 1);
+        } else if (selection.equals("w") && Dungeon.isWestDirection()) {
+            player.setCurrX(player.getCurrX() - 1);
+        }
+
     }
 
 

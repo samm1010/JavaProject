@@ -7,7 +7,7 @@ public class Location {
     private static boolean westDirection = false;
     private static boolean eastDirection = false;
 
-
+    //sets up array for game world
 
     public static void gameWorld() {
         String[][] map = new String[5][5];
@@ -37,7 +37,7 @@ public class Location {
         map[4][3] = "You have arrived at ";
         map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
         System.out.println(map[0][1]);
-      /*  player.setCurrRoom(map[2][12]);*/
+      /*  player.setCurrRoom(map[2][2]);*/
 
     }
     public boolean roomExists(int x, int y) {
@@ -50,6 +50,19 @@ public class Location {
 
     public boolean colExists(int y) {
         return (y >= 0) && (y <= 4);
+    }
+
+    public void playerMovement(Player player) {
+        northDirection = roomExists(player.getCurrX(), player.getCurrY()
+                + 1);
+        southDirection = roomExists(player.getCurrX(), player.getCurrY()
+                - 1);
+        eastDirection = roomExists(player.getCurrX() + 1,
+                player.getCurrY());
+        westDirection = roomExists(player.getCurrX() - 1,
+                player.getCurrY());
+        IO.movePlayer(player);
+
     }
 
 
