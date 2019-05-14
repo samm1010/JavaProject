@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class IO {
 
+
     //Method for delaying text
 
     private static void textDelay(long a) {
@@ -20,7 +21,9 @@ public class IO {
 
     public static void Welcome() {
         //system objects
+/*
         Scanner userInput = new Scanner(System.in);
+*/
 
         //Welcome Message
 
@@ -38,7 +41,7 @@ public class IO {
 
         System.out.print("Enter your name: ");
 
-        String pName = userInput.nextLine();
+        String pName = Main.userInput.nextLine();
 
         System.out.println(pName +" honey what do you think it is, your wife whispers.");
 
@@ -72,28 +75,28 @@ public class IO {
 
     public static void movePlayer(Player player) {
 
-        if (Dungeon.isNorthDirection() == true) {
+        if (Location.isNorthDirection() == true) {
             System.out.println("North (n)\n");
         }
-        if (Dungeon.isSouthDirection() == true) {
+        if (Location.isSouthDirection() == true) {
             System.out.println("South (s)\n");
         }
-        if (Dungeon.isEastDirection() == true) {
+        if (Location.isEastDirection() == true) {
             System.out.println("East (e)\n");
         }
-        if (Dungeon.isWestDirection() == true) {
+        if (Location.isWestDirection() == true) {
             System.out.println("West (w)\n");
         }
 
         System.out.print("Where would you like to travel?: ");
-        String selection = ProjectMoria.USERINPUT.nextLine();
-        if (selection.equals("n") && Dungeon.isNorthDirection()) {
+        String selection = Main.userInput.nextLine();
+        if (selection.equals("n") && Location.isNorthDirection()) {
             player.setCurrY(player.getCurrY() + 1);
-        } else if (selection.equals("s") && Dungeon.isSouthDirection()) {
+        } else if (selection.equals("s") && Location.isSouthDirection()) {
             player.setCurrY(player.getCurrY() - 1);
-        } else if (selection.equals("e") && Dungeon.isEastDirection()) {
+        } else if (selection.equals("e") && Location.isEastDirection()) {
             player.setCurrX(player.getCurrX() + 1);
-        } else if (selection.equals("w") && Dungeon.isWestDirection()) {
+        } else if (selection.equals("w") && Location.isWestDirection()) {
             player.setCurrX(player.getCurrX() - 1);
         }
 

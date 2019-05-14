@@ -66,7 +66,25 @@ public class Location {
     }
 
 
+    public static boolean isNorthDirection() {
+        return northDirection;
     }
+
+    public static boolean isSouthDirection() {
+        return southDirection;
+    }
+
+    public static boolean isWestDirection() {
+        return westDirection;
+    }
+
+    public static boolean isEastDirection() {
+        return eastDirection;
+    }
+
+
+
+}
 
 
 
