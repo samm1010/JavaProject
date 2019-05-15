@@ -73,6 +73,7 @@ public class IO {
         //System.out.println("Your adventure awaits " + pName + "!");
     }
 
+/*
     public static void movePlayer(Player player) {
 
         if (Location.isNorthDirection() == true) {
@@ -91,9 +92,9 @@ public class IO {
         System.out.print("Where would you like to travel?: ");
         String selection = Main.userInput.nextLine();
         if (selection.equals("n") && Location.isNorthDirection()) {
-            player.setCurrY(player.getCurrY() + 1);
+            Player.setCurrY(player.getCurrY() + 1);
         } else if (selection.equals("s") && Location.isSouthDirection()) {
-            player.setCurrY(player.getCurrY() - 1);
+            Player.setCurrY(player.getCurrY() - 1);
         } else if (selection.equals("e") && Location.isEastDirection()) {
             player.setCurrX(player.getCurrX() + 1);
         } else if (selection.equals("w") && Location.isWestDirection()) {
@@ -102,5 +103,6 @@ public class IO {
 
     }
 
+*/
 
     }

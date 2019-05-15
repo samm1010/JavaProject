@@ -23,7 +23,7 @@ public class Location {
         map[1][4] = "You have arrived at ";
         map[2][0] = "You have arrived at ";
         map[2][1] = "You have arrived at ";
-        map[2][2] = "You have arrived at ";
+        map[2][2] = "You have arrived at HOME ";
         map[2][3] = "You have arrived at ";
         map[2][4] = "You have arrived at ";
         map[3][0] = "You have arrived at ";
@@ -36,8 +36,11 @@ public class Location {
         map[4][2] = "You have arrived at ";
         map[4][3] = "You have arrived at ";
         map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
-        System.out.println(map[0][1]);
+        /*  System.out.println(map[0][1]);*/
+    }
+}
       /*  player.setCurrRoom(map[2][2]);*/
+/*
 
     }
     public boolean roomExists(int x, int y) {
@@ -87,6 +90,7 @@ public class Location {
 }
 
 
+*/
 
 
 

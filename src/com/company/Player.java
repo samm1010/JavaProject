@@ -1,6 +1,23 @@
 package com.company;
 
 public class Player {
+
+    public String name;
+    public int currX;
+    public int currY;
+
+
+    public void playerStart() {
+        name = "sam";
+        currX = 2;
+        currY = 2;
+        System.out.println(currX);
+
+    }
+
+}
+
+/*
     private final String name;
     private final String description;
     private int currX;
@@ -49,3 +66,4 @@ public class Player {
         this.currY = currY;
     }
 }
+*/
