@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 public class IO {
 
+    Player player;
+//    Player player;
+
 
     //Method for delaying text
 
-    private static void textDelay(long a) {
+    private  void textDelay(long a) {
         try {
             Thread.sleep(a);
         }
@@ -15,17 +18,17 @@ public class IO {
         {
         }
     }
-
-
     //Intro message
 
-    public static void Welcome() {
+    public void Welcome(String pName) {
+
         //system objects
 /*
         Scanner userInput = new Scanner(System.in);
 */
 
         //Welcome Message
+//        pName = player.getName();
 
         System.out.println("Welcome to Outbreak.");
 
@@ -39,15 +42,11 @@ public class IO {
 
         System.out.println("You awake that morning to a banging at your door.");
 
-        System.out.print("Enter your name: ");
-
-        String pName = Main.userInput.nextLine();
-
-        System.out.println(pName +" honey what do you think it is, your wife whispers.");
+        System.out.println(pName + " honey what do you think it is, your wife whispers.");
 
         System.out.println("I'm not sure you say, reaching for your shotgun. But I'm going to find out ");
 
-        System.out.println(pName +" your daughter cries. But you can barely hear her, all you can think about is whats on the other side of that door");
+        System.out.println(pName + " your daughter cries. But you can barely hear her, all you can think about is whats on the other side of that door");
 
         System.out.println("You return bruised and beaten, but victorious. You had managed to shoot both the looters dead. Your attention now turns to other matters, you scan the room and suddenly a horrifying though enters your head.");
 
@@ -71,7 +70,18 @@ public class IO {
 
 
         //System.out.println("Your adventure awaits " + pName + "!");
+
+
     }
+
+//    public String getpName(pName) {
+//        return pName;
+//
+//    }
+
+/*    public String setPname() {
+
+    }*/
 
 /*
     public static void movePlayer(Player player) {

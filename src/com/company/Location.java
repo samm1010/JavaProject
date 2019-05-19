@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Location {
 
     private static boolean northDirection = false;
@@ -36,9 +38,16 @@ public class Location {
         map[4][2] = "You have arrived at ";
         map[4][3] = "You have arrived at ";
         map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
-        /*  System.out.println(map[0][1]);*/
+        /*Player.setCurrRoom(map[2][2]);*/
+
     }
+
+/*
+    public String currRoom ()
+*/
+
 }
+
       /*  player.setCurrRoom(map[2][2]);*/
 /*
 

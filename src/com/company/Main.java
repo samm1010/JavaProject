@@ -1,10 +1,14 @@
 package com.company;
 
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
-    Player player = new Player();
 
+    Location map = new Location();
+    IO mainmenu = new IO();
+    Player player = new Player("", 2, 2);
     public static final Scanner userInput = new Scanner(System.in);
 
 
@@ -18,10 +22,18 @@ public class Main {
 
 
     public Main(){
+//        player.playerStart();
+//        player.setName(Main.userInput.nextLine());
+        player.setName(player.inputName());
+        mainmenu.Welcome(player.getName());
 
-        player.playerStart();
-        Location.gameWorld();
+        System.out.println(player.getName());
+        System.out.print("X: " + player.getCurrX() +"Y: " + player.getCurrY());
+
+        /*map.gameWorld(Player.getCurrX(),player.getCurrY());*/
+/*
         IO.Welcome();
+*/
 
 
     }

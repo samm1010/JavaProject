@@ -2,43 +2,75 @@ package com.company;
 
 public class Player {
 
-    public String name;
-    public int currX;
-    public int currY;
+    private String name;
+    private int currX;
+    private int currY;
 
+    public Player(String name, int startX, int startY){
+        this.name = name;
+        this.currX = startX;
+        this.currY = startY;
+    }
+
+
+
+
+        public String getName(){
+        return this.name;
+    }
+
+//    public void setName (String Name) {
+//        this.name = Name;
+//    }
+
+        public int getCurrX () {
+            return this.currX;
+        }
+
+        public int getCurrY () {
+            return this.currY;
+        }
+
+        public void setName(String name){
+        this.name = name;
+        }
+
+        public String inputName(){
+        System.out.print("\nEnter your name: ");
+        return Main.userInput.nextLine();
+
+
+
+        }
+
+
+/*        public Room getCurrRoom () {
+            return currRoom;
+        }
+
+        public void setCurrRoom (Room room){
+            currRoom = room;
+        }*/
+
+//        public void setCurrX ( int currX){
+//            this.currX = currX;
+//        }
+//
+//        public void setCurrY ( int currY){
+//            this.currY = currY;
+//        }
+    }
+
+
+
+/*
 
     public void playerStart() {
         name = "sam";
         currX = 2;
         currY = 2;
-        System.out.println(currX);
+        *//*System.out.println(currX);*//*
 
-    }
-
-}
-
-/*
-    private final String name;
-    private final String description;
-    private int currX;
-    private int currY;
-    private Room currRoom;
-
-    public Player(String name, String description, int maxHitPoints,
-                  int minDamage, int maxDamage, int defense, double critChance) {
-        this.name = name;
-        this.description = description;
-        this.currX = 2;
-        this.currY = 2;
-
-
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public int getCurrX() {
@@ -48,22 +80,4 @@ public class Player {
     public int getCurrY() {
         return currY;
     }
-
-
-    public Room getCurrRoom() {
-        return currRoom;
-    }
-
-    public void setCurrRoom(Room room) {
-        currRoom = room;
-    }
-
-    public void setCurrX(int currX) {
-        this.currX = currX;
-    }
-
-    public void setCurrY(int currY) {
-        this.currY = currY;
-    }
-}
-*/
+}*/
