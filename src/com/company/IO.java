@@ -5,30 +5,22 @@ import java.util.Scanner;
 public class IO {
 
     Player player;
-//    Player player;
-
 
     //Method for delaying text
 
-    private  void textDelay(long a) {
+    private void textDelay(long a) {
         try {
             Thread.sleep(a);
-        }
-        catch (InterruptedException ex)
-        {
+        } catch (InterruptedException ex) {
         }
     }
+
     //Intro message
 
     public void Welcome(String pName) {
 
-        //system objects
-/*
-        Scanner userInput = new Scanner(System.in);
-*/
 
         //Welcome Message
-//        pName = player.getName();
 
         System.out.println("Welcome to Outbreak.");
 
@@ -69,21 +61,9 @@ public class IO {
         System.out.println("Taking only a unsubstantial amount of food and a small firearm, you leave the comfort of your home on foot, kissing your wife as you leave.");
 
 
-        //System.out.println("Your adventure awaits " + pName + "!");
-
-
     }
 
-//    public String getpName(pName) {
-//        return pName;
-//
-//    }
 
-/*    public String setPname() {
-
-    }*/
-
-/*
     public static void movePlayer(Player player) {
 
         if (Location.isNorthDirection() == true) {
@@ -97,22 +77,26 @@ public class IO {
         }
         if (Location.isWestDirection() == true) {
             System.out.println("West (w)\n");
+
+
         }
 
         System.out.print("Where would you like to travel?: ");
         String selection = Main.userInput.nextLine();
-        if (selection.equals("n") && Location.isNorthDirection()) {
-            Player.setCurrY(player.getCurrY() + 1);
-        } else if (selection.equals("s") && Location.isSouthDirection()) {
-            Player.setCurrY(player.getCurrY() - 1);
-        } else if (selection.equals("e") && Location.isEastDirection()) {
+        if (selection.equals("n") || selection.equals("N") && Location.isNorthDirection()) {
+            player.setCurrY(player.getCurrY() + 1);
+        } else if (selection.equals("s") || selection.equals("S") && Location.isSouthDirection()) {
+            player.setCurrY(player.getCurrY() - 1);
+        } else if (selection.equals("e") || selection.equals("E") && Location.isEastDirection()) {
             player.setCurrX(player.getCurrX() + 1);
-        } else if (selection.equals("w") && Location.isWestDirection()) {
+        } else if (selection.equals("w") || selection.equals("W") && Location.isWestDirection()) {
             player.setCurrX(player.getCurrX() - 1);
+        } else if (!selection.equals("w") || !selection.equals("W") || !selection.equals("s")|| !selection.equals("S") || !selection.equals("E")|| !selection.equals("e")|| !selection.equals("n")|| !selection.equals("N"))  {
+            System.out.println("You have entered an incorrect value, please enter either N, S, W or E.");
+
+
+
         }
 
     }
-
-*/
-
-    }
+}

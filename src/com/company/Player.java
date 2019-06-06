@@ -13,15 +13,9 @@ public class Player {
     }
 
 
-
-
         public String getName(){
         return this.name;
     }
-
-//    public void setName (String Name) {
-//        this.name = Name;
-//    }
 
         public int getCurrX () {
             return this.currX;
@@ -36,48 +30,18 @@ public class Player {
         }
 
         public String inputName(){
-        System.out.print("\nEnter your name: ");
+        System.out.print("Enter your name: ");
         return Main.userInput.nextLine();
-
-
-
         }
 
 
-/*        public Room getCurrRoom () {
-            return currRoom;
+        public void setCurrX (int currX) {
+            this.currX = currX;
         }
 
-        public void setCurrRoom (Room room){
-            currRoom = room;
-        }*/
-
-//        public void setCurrX ( int currX){
-//            this.currX = currX;
-//        }
-//
-//        public void setCurrY ( int currY){
-//            this.currY = currY;
-//        }
+        public void setCurrY (int currY){
+          this.currY = currY;
+       }
     }
 
 
-
-/*
-
-    public void playerStart() {
-        name = "sam";
-        currX = 2;
-        currY = 2;
-        *//*System.out.println(currX);*//*
-
-    }
-
-    public int getCurrX() {
-        return currX;
-    }
-
-    public int getCurrY() {
-        return currY;
-    }
-}*/

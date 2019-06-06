@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Location {
 
+
     private static boolean northDirection = false;
     private static boolean southDirection = false;
     private static boolean westDirection = false;
@@ -11,47 +12,43 @@ public class Location {
 
     //sets up array for game world
 
-    public static void gameWorld() {
-        String[][] map = new String[5][5];
-        map[0][0] = "You have arrived at ";
-        map[0][1] = "You have arrived at the mall OBJECT 1 HERE";
-        map[0][2] = "You have arrived at ";
-        map[0][3] = "You have arrived at ";
-        map[0][4] = "You have arrived at ";
-        map[1][0] = "You have arrived at ";
-        map[1][1] = "You have arrived at ";
-        map[1][2] = "You have arrived at ";
-        map[1][3] = "You have arrived at ";
-        map[1][4] = "You have arrived at ";
-        map[2][0] = "You have arrived at ";
-        map[2][1] = "You have arrived at ";
-        map[2][2] = "You have arrived at HOME ";
-        map[2][3] = "You have arrived at ";
-        map[2][4] = "You have arrived at ";
-        map[3][0] = "You have arrived at ";
-        map[3][1] = "You have arrived at ";
-        map[3][2] = "You have arrived at ";
-        map[3][3] = "You have arrived at ";
-        map[3][4] = "You have arrived at ";
-        map[4][0] = "You have arrived at ";
-        map[4][1] = "You have arrived at the hospital OBJECT 2 HERE";
-        map[4][2] = "You have arrived at ";
-        map[4][3] = "You have arrived at ";
-        map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
-        /*Player.setCurrRoom(map[2][2]);*/
+    private  String[][] map = new String[5][5];
 
+    public Location() {
+            map[0][0] = "You have arrived at ";
+            map[0][1] = "You have arrived at the mall OBJECT 1 HERE";
+            map[0][2] = "You have arrived at ";
+            map[0][3] = "You have arrived at ";
+            map[0][4] = "You have arrived at ";
+            map[1][0] = "You have arrived at ";
+            map[1][1] = "You have arrived at ";
+            map[1][2] = "You have arrived at ";
+            map[1][3] = "You have arrived at ";
+            map[1][4] = "You have arrived at ";
+            map[2][0] = "You have arrived at a football cage with zombies inside";
+            map[2][1] = "You have arrived at a forest";
+            map[2][2] = "You have arrived at HOME ";
+            map[2][3] = "You have arrived at a your street ";
+            map[2][4] = "You have arrived at the shops at the end of the road";
+            map[3][0] = "You have arrived at ";
+            map[3][1] = "You have arrived at ";
+            map[3][2] = "You have arrived at ";
+            map[3][3] = "You have arrived at ";
+            map[3][4] = "You have arrived at ";
+            map[4][0] = "You have arrived at ";
+            map[4][1] = "You have arrived at the hospital OBJECT 2 HERE";
+            map[4][2] = "You have arrived at ";
+            map[4][3] = "You have arrived at ";
+            map[4][4] = "You have arrived at the police station OBJECT 3 HERE";
+
+        }
+    public String getDescription(int x, int y){
+        return this.map[x][y];
     }
 
-/*
-    public String currRoom ()
-*/
 
-}
 
-      /*  player.setCurrRoom(map[2][2]);*/
-/*
 
-    }
     public boolean roomExists(int x, int y) {
         return (rowExists(x)) && (colExists(y));
     }
@@ -93,13 +90,14 @@ public class Location {
     public static boolean isEastDirection() {
         return eastDirection;
     }
-
-
-
 }
 
 
-*/
+
+
+
+
+
 
 
 
